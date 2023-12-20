@@ -3,15 +3,22 @@
 import * as stylex from "@stylexjs/stylex";
 import { buttonTokens } from "./ButtonTokens.stylex";
 import ThemeableButton from "./ThemeableButton";
+import { globalTokens } from "../globalTokens.stylex";
 
 type Props = Readonly<{}>;
+
+const buttonStyles = stylex.create({
+  button: {
+    backgroundColor: globalTokens.primaryColor,
+  },
+});
 
 export default function ButtonsDemo(_props: Props) {
   const onClick = () => {
     console.log("click");
   };
   return (
-    <div {...stylex.props(styles.container)}>
+    <div {...stylex.props(styles.container, buttonStyles.button)}>
       <ThemeableButton onClick={onClick}>Vanilla Button</ThemeableButton>
 
       <ThemeableButton onClick={onClick} style={styles.bordered}>

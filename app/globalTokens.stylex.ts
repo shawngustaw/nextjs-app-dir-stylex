@@ -273,4 +273,6 @@ export const globalTokens = stylex.defineVars({
     default: "radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
     [DARK_MODE]: `linear-gradient(to bottom right, rgba(1, 65, 255, 0), rgba(1, 65, 255, 0), rgba(1, 65, 255, 0.3))`,
   },
+
+  primaryColor: { default: "red", [DARK_MODE]: "green" },
 });
